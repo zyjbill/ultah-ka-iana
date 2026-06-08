@@ -262,12 +262,16 @@
     let mailBox = document.querySelector('.mail')
     let boxmail = document.querySelector('.boxMail')
     var close = document.querySelector('.fa-xmark')
+    let music = document.getElementById("bgMusic");
     mailBox.onclick = function () {
+        music.play();
         mailBox.classList.toggle('active')
         boxmail.classList.add('active')
     }
 
     close.addEventListener('click', function () {
+        music.pause();
+        music.currentTime = 0;
         boxmail.classList.remove('active')
     })
 </script>
